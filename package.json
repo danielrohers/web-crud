@@ -1,0 +1,20 @@
+{
+  "name": "web-crud",
+  "version": "0.0.1",
+  "description": "CRUD request",
+  "main": "index.js",
+  "keywords": [
+    "web",
+    "crud",
+    "request"
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielrohers/web-crud.git"
+  },
+  "author": "Daniel Rôhers Moura <rohersmoura@gmail.com> (https://github.com/danielrohers)",
+  "license": "MIT"
+}
