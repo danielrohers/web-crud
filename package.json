@@ -1,7 +1,7 @@
 {
   "name": "web-crud",
-  "version": "0.0.2",
-  "description": "Web application CRUD request Node and Mongoose",
+  "version": "0.0.3",
+  "description": "Web application CRUD Node and Mongoose",
   "main": "index.js",
   "keywords": [
     "web",
