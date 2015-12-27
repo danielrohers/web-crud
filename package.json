@@ -15,6 +15,9 @@
     "type": "git",
     "url": "https://github.com/danielrohers/web-crud.git"
   },
+  "bugs": {
+    "url": "https://github.com/danielrohers/web-crud/issues"
+  },
   "author": "Daniel Rôhers Moura <rohersmoura@gmail.com> (https://github.com/danielrohers)",
   "license": "MIT"
 }
