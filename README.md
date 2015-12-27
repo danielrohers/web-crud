@@ -45,7 +45,7 @@ const Crud = require('web-crud');
 
 Crud.model(Model); // set model mongoose
 
-module.exports = class Channel extends Crud {};
+module.exports = class Foo extends Crud {};
 ```
 
 route/foo.js
