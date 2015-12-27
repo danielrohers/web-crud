@@ -1,6 +1,6 @@
 # web-crud
 
-Web application CRUD request Node and Mongoose
+Web application CRUD Node and Mongoose
 - list
 - create
 - findById
