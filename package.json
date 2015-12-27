@@ -1,11 +1,13 @@
 {
   "name": "web-crud",
   "version": "0.0.1",
-  "description": "CRUD request",
+  "description": "Web application CRUD request Node and Mongoose",
   "main": "index.js",
   "keywords": [
     "web",
     "crud",
+    "es6",
+    "mongoose",
     "request"
   ],
   "engines": {
