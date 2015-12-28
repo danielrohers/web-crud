@@ -9,13 +9,36 @@ module.exports = class Crud {
     };
 
     static list (req, res) {
-        _model
-            .find({})
+        let limit = req.query._limit;
+        delete req.query._limit;
+        let skip = req.query._skip;
+        delete req.query._skip;
+        let sort = req.query._sort;
+        delete req.query._sort;
+        let count = req.query._count;
+        delete req.query._count;
+        let params = req.query || {};
+
+        _model.find(params)
+            .limit(limit)
+            .skip(skip)
+            .sort(sort)
             .exec((err, data) => {
                 if (err) {
                     return res.status(500).json({ success: false, message: err });
                 }
-                return res.status(200).json({ success: true, data: data });
+
+                if (!count) {
+                    return res.status(200).json({ success: true, data: data });
+                }
+
+                _model.count(params, (err, count) => {
+                    if (err) {
+                        return res.status(500).json({ success: false, message: err });
+                    }
+
+                    return res.status(200).json({ success: true, data: data, count: count });
+                });
             });
     };
 
