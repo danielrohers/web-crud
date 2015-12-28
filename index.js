@@ -28,17 +28,17 @@ module.exports = class Crud {
                     return res.status(500).json({ success: false, message: err });
                 }
 
-                if (count) {
-                    _model.count(params, (err, count) => {
-                        if (err) {
-                            return res.status(500).json({ success: false, message: err });
-                        }
-
-                        return res.status(200).json({ success: true, data: data, count: count });
-                    });
-                } else {
+                if (!count) {
                     return res.status(200).json({ success: true, data: data });
                 }
+
+                _model.count(params, (err, count) => {
+                    if (err) {
+                        return res.status(500).json({ success: false, message: err });
+                    }
+
+                    return res.status(200).json({ success: true, data: data, count: count });
+                });
             });
     };
 
