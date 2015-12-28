@@ -29,8 +29,16 @@ const Schema = mongoose.Schema;
 const FooSchema = new Schema({
     name: {
         type: String,
-        default: ''
-    }
+        required: true
+    },
+    last_name: {
+        type: String,
+        required: true
+    },
+    full_name: {
+        type: String,
+        required: true
+    },
 });
 
 module.exports = mongoose.model('Foo', FooSchema);
@@ -45,7 +53,15 @@ const Crud = require('web-crud');
 
 Crud.model(Model); // set model mongoose
 
-module.exports = class Foo extends Crud {};
+module.exports = class Foo extends Crud {
+
+    // if you want to override
+    static create (req, res) {
+        req.body.full_name = `${req.body.name} ${req.body.last_name}`
+        super.create(req, res);
+    };
+
+};
 ```
 
 route/foo.js
