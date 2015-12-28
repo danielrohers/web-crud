@@ -70,6 +70,39 @@ router
 module.exports = router;
 ```
 
+List method accepts common query parameters. To prevent column name confusion, some of those parameter are prefixed with underscore.
+
+*Find
+```js
+/myapiurl/list?my_object_propertie=SomeValue
+```
+According to: http://mongoosejs.com/docs/api.html#query_Query-find
+
+*Limit
+```js
+/myapiurl/list?_limit=10
+```
+According to: http://mongoosejs.com/docs/api.html#query_Query-limit
+
+*Skip
+```js
+/myapiurl/list?_skip=5
+```
+According to: http://mongoosejs.com/docs/api.html#query_Query-skip
+
+*Sort
+```js
+/myapiurl/list?_sort=property_name
+/myapiurl/list?_sort=-property_name
+```
+According to: http://mongoosejs.com/docs/api.html#query_Query-sort
+
+*Count
+```js
+/myapiurl/list?_count=true
+```
+According to: http://mongoosejs.com/docs/api.html#query_Query-count
+
 ## Technologies
 - [Node.js](https://nodejs.org)
 
