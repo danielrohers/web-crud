@@ -58,7 +58,7 @@ module.exports = class Foo extends Crud {
     // if you want to override
     static create (req, res) {
         req.body.full_name = `${req.body.name} ${req.body.last_name}`
-        super.create(req, res);
+        super.create(req, res); // call the super method or not :)
     };
 
 };
