@@ -19,7 +19,7 @@ $ npm install web-crud --save
 
 ### Example
 
-model/foo.js
+##### model/foo.js
 ```js
 'use strict';
 
@@ -44,7 +44,7 @@ const FooSchema = new Schema({
 module.exports = mongoose.model('Foo', FooSchema);
 ```
 
-controller/foo.js
+##### controller/foo.js
 ```js
 'use strict';
 
@@ -64,7 +64,7 @@ module.exports = class Foo extends Crud {
 };
 ```
 
-route/foo.js
+##### route/foo.js
 ```js
 'use strict';
 
